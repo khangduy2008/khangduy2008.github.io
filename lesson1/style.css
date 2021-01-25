@@ -1,0 +1,27 @@
+h1{
+	color: #d62424 ;
+	background-color: blue;
+	font-size: 50px;
+}
+.sothich{
+	color: #f6fa00;
+}
+.thich{
+	color:#4834d4;
+}
+.so{
+	color:#05def2;
+}
+body{
+	text-align: center;
+	/*background-color: brown;*/
+	background: linear-gradient(to right,brown,yellow)
+
+
+
+}
+img{
+	width: 500px;
+	height: 500px;
+	border-radius: 50%; 
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     <h1>Ðây là th? h1 nè</h1>
+    <h1> Ðây là dài ti?ng nói Vi?t Nam</h1>
+    <p>Ðây là th? p c?a chúng ta</p>
+
+
+    <img src="https://picsum.photos/300/300" alt="Ðây là 1 b?c ?nh d?p">
+
+    <iframe src="https://www.youtube.com/embed/vX8ABTmbJ98" ></iframe> -->
+
+
+
+</body>
+</html>
