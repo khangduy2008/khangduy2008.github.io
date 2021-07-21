@@ -54,9 +54,48 @@ nav .logo img{
     white-space: 2px;
     letter-spacing: 2px;
 }
-.nav_ỉtro a {
-
-}
 .nav_intro a :hover{
 
+}
+.btn-ghost:link, .btn-ghost:visited {
+    border: solid 1px #e67e22;
+    color: #e67e22;
+}
+.btn-full:link, .btn-full:visited, input[type=submit] {
+    background-color: #e67e22;
+    border: solid 1px #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+.btn:link, .btn:visited, input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+a:link, a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
 }
