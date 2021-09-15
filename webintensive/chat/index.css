@@ -1,0 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.chat .left{
+    width: 150px;
+}
+.mid{
+    width: 300px;
+}
+.right{
+    width: 895px;
+}
+.left, .mid, .right {
+    float: left;
+    box-sizing: border-box;
+    padding: 150px 30px;
+    height: 500px;
+    border: groove;
+  }
+.left a{
+ width: 100px;
+height: 100px;
+}
+.mid .info{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+  width: 10%;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  padding:15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.mid{
+  width: 30%;
+  height: 100%;
+  padding:15px;
+}
+
+.right{
+  width:60%;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  padding:15px;
+}
+.mid .info{
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid rgba(red, green, blue, alpha);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mid .userlist{
+  width: 100%;
+  height: calc(100% - 100px);
+overflow-y: scroll;
+  padding: 13px;
+}
+.mid .userlist .user{
+  padding: 20px 5px;
+  border: 1 px solid rgba(0 , 0 , 0 ,0.125);
+  margin-bottom: 5px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  background:#fff; 
+  overflow-y : 50px;
+}
+.mid .userlist .user i{
+margin-right: 5px;
+}
+.mid .userlist .user:hover{
+  background-color: #bdbdbd;
+  transition: 0.7s;
+  padding-left: 50px;
+}
+.right .info{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid rgba(0, 0, 0,0.25);
+  padding: 0px 30px;
+}
+
+.right .chat_body{
+  width: 100%;
+  /* height: 90%; */
+  height: calc(100% - 100px);
+  padding-top: 15px;
+}
+
+.right .chat_body .chat_content{
+  width: 100%;
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.right .chat_body form{
+  width: 100%;
+  height: 6%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+.right .chat_body form button{
+  background: transparent;
+  border: none;
+}
+.right .chat_body form input{
+  width: 95%;
+  padding:7px 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgb(133, 206, 255);
+  transition: 0.5s;
+
+}
+.right .chat_body form input:focus{
+  padding-bottom: 15px;
+  transition: 0.5s;
+}
+    
+ .message{
+      margin-bottom: 10px;
+      max-width: 60%;
+      color:#2c3e50;
+      padding: 3px 15px;
+      border-radius: 15px;
+      align-self: flex-start;
+      border: 1px solid black;
+    }
+    
+    .message .message_info{
+      display: flex;
+      justify-content: space-between;
+    }
+    .dark .content_m{
+      color: gray;
+    
+    }
+    .message span{
+      font-size: 12px;
+      font-style: italic;
+    }
+    
+    .content_m{
+      font-size: 20px !important;
+      font-style: normal !important;
+      color: #2c3e50;
+    }
+    .dark .message.onwer{
+      color: whitesmoke ;
+    }
+    .message.onwer{
+      background: rgb(133, 206, 255);
+      align-self: flex-end;
+    }
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <form id="contact">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBASEhAWEBAWFRgTFRATEBYVFhYQFRMWFhcSFRUYHSggGB0nHRYWIjEiJSkrLi4uGB80ODMtNygtLi0BCgoKDg0OGhAPGy0eHh8tLS0tKy0rLS0tLS0tLS0tKy0rLS0tLS0tLS0tLS0tLS0tLS0rLS0tNystKy0tNy0tLf/AABEIARUAtgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABAUBAwYCBwj/xABAEAACAgECBAIHBQUGBgMAAAAAAQIRAxIhBDFBUQUiBhNhcYGRoTJCU7HBFiNSotFygpLC0uEVQ2Jj8PEHFDP/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAiEQEBAAEFAAICAwAAAAAAAAAAAQIDERIhMVFhIkEEExT/2gAMAwEAAhEDEQA/AJYAOL6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJPDcPjm4x9dUpJVF45c65W9je+AxrnxEfkn+TKPPk0qDjhx77W4W3Su9u9dupmXEyr/wDODfRLG/zcGirx+1jxGOEZaY5VJ6dVtOKSuubND2+9D4SlL8omIRqS1Qg/7kefb7K3q/kRc2HVTVadUmn0pydbdq7EakT44W1s032alH6tUZ9UritXmalar7Li4que96j1wHh2pxjjS9ZL7z5JJrzPrXSvb7bNvE8FPDn0TqtLnGUXcXFvHFrdWmnHl7Vu+mpHHLKTr9uXj6Rp5li9U+r1a+19K9hMweJ6pKKh1r7XXVp5V8TnPBODlxHiWPFBrU1K22qilquTXX3e1e86/ifC5cLneGU9b0+tjJRcbjPXFOt6et1zfIXpcfyy47p+LgJyjGSTcX1SuvqZn4fOtk2+2hpfMlY8+aPCfuVHUpPad6VCOR29mt9KRT4PHuKnHBryYOHWVTnHO43Goxj+6cXKlK3K9+S2Mco9GOhb+0zHwGR/ckvgr9z3r6szm4CcYTnpbUYuVLTeyb5atuTK/gfG+Kz5eHxwzQwyy4fWadEJU4zlFtKTtqUY6lzdPsmyR6J+JZ82WSyZ9coY3rx6McdGVZ5x82mKaemMdn3Y5Ll/Hsl7SI8HfKVxq7rmuvXuZlwE6tbre7pVtt13JXgrjqlilBSWOWSNNc05Jrf3P6mniPH8McmTG+HyRUbTm8cdK+2o7J3TcGk67dzXKOU0c74gAAjIAAAAAAAAAAIGXDO4bvflUvZ91N32v3P3m6XB5Gnq6Rclc93W7t6tu3YlRwZPK43vGPmWmu6WmW9rvf8Atl4czVdHz2glzt3W7Xs9obkQ4cPUZuuiab57bvq6ukRoylFK2209K32bUqSUVK237uvXmWufUotyjW27tV8+nxomei/hmvLKbdxTVL/uKKuXwWn4v2Fk3Zzy4zdZejPhWaLjkm68taK5W4t27dvb4d2dFl4bHJqUscZSSpSlFNpPmk3yNkY0qXIydHht3u7xLFFqnFNdtKK7j/AcGR6q9XNJRU48tKlqUdPKtSvanz33LQAls7jmeG4F41kxZUpJtvlcZ45JLk/k1/VNy+E8Ixyhpjjxxxp7Q0KtXO9NV1LHxHEnDVycPNaVvSvtJLr5b2712NnDTxwTUZqSb1eaSi+S53Xb2czHCbvV/oy49eoq8MV7NN1/ByXa75EbNicZNOuV2uttr9C1jmjS80OX4i/QhcXKErd6ptJJxTSSTfNvnz7CyLp6uVvahxyS4i+8mn7XSh+iJWTwrHKeXI4ylKePRJOcnFwjuvLdKu/S33K/Fvkj7ZX/ADJ/qdVw2OKhKSmnLS7i9qtfUxjN3o1s+E3jgwYRkriAAAAAAAAAADdJSWNSfrEkoW4yxvaVJbXtz7GmfH9FGb9rcU/omi5/4W8mGMfWaVKMJOou9tMq+1vyNP7Nr8aa+C/WzUhln8Kr/iFalKMpxe1eVUuu+rf40dn6N8Oo4YutN+auzk9bX81fAoM/o7BRf72bulvprzNR6L2nYcIqhH5/M1I8+rlb1W0AFcgieF8ZLNiU5YcnDu5L1WVJTWmTjezap1a9jJYAj8YsmlernGDU4uTnFyTxKS1x2apuN0+hTrwqTX7vPHJFbUpNco1zUmr2voSfSf0dwcfg9Rnc1DUp/u56XqSaV7NNb8miB6I+g/B+HSyTweslOcdEp5Ml+S06SikuaW9WLJW8M8sL00esUZOE1ktLeMtOyjK7fm5b8+qZCz+L8LhlHVLJq+0lp/tR3/mRf+kXBa5YpKcscnqxtxUG2mtST1RfLTL/ABM5zj/RWOaSlLiMmypVDEutvlBdzlx7e2a8uP2jcJ49gU4OUnpXs9j/AFr5E/P6TcNLZZJJ7r7F7tUiD+xOL8fJfux/6T0vQ3DHf103W/KHT4GuLF1bXgAEAAEAAAAAAABR1fCQXq8SV3oju26+yjb6vvv3qUkVOOUnCC9dNRjji27jFJtRqLajvtfPlt3Is4zbaf7xXablkltS6qFc75ew3s8/JecVCKcErvVdOUuSi96ft0lzCNJLsqOX8EwXmvSo1FLaLW0pX1iv4DqiueV3oAAgAAAMP2c/nuQ+N4icIxiqc5X59NRil1rffdJJ7X8gPHGaZzUXuobv+21svhG/8SNDwRdpJ9ubW9WbsMaSSW3tk223u2+7b3POGUvNsvtP73bbt7CN49NMeHjdbr3N9PeesnDxUZbvZP38vcesl68e38X5I95X5ZbdH27Bbb04lGTCMnN6QAAAAAAAAAAX/BYl6qClTtJu13Sr5Kl8Dbjxye8YpR6Nuk/akk9vkRYRbxw22UIJJuk5SUU5N9Ek+fv7I38bgzakoSn9lbx0palJu6bSVeXbqtne50eWepvhEH6ybfNOvgor9ZSLk57wbiIYsdytJJt9X52ppe3eVGzJ6T4l/wAua/tOC/zMu7MxuXi9NMuKgnWq3y2TdNc02uTK/guN/wDtWtGjHFpuWu25faUFS26Nu+TXe1ZrHFaaVaVSS2SXsQSzZmE01aaa7p2j0RpQUJRkvvSqft1XT9+rSvcySAI/F409KfJ3C+2rdSXt1RjXvJBr4iLcXSt81/ai9UfqkEQOHm3V7S3T6rVF1Kn7/oOHvTz5u+XdjiMqjkVcsiU06b3ilGTe22zh9TEc0V3rtp2/Ijc8Zb88fdL80OK1aJ8uT79jy8kbtN37U1t2uqPObL5ZK3yfZ9OyQa2vTjkZMIyc3pAAAAAAAAAABdT4jRixbJpwjeqVdIr48/oV/E8XOpaFbV7KeSStSrdKW22/KhwHEpyxxeSKVU/LitVBtfai+qXMzk4yFxSuT1RbShgVpTttP1cXJUuafU6bvPNLK9xY+K4dGOFfYbjjf9xOcfyl9C29G8KjgjKkpScm3W9KTit/cl8yh4/xFZFCCi405Tt1zqMVyftZb+j3iEXgxrnSSfdPnTXxtE9q5Y3HTm/yuoQSuurt+/8A9JL4I9HiGaD+8vmecnEQircl8zTi88U/sR/imq/ufvP8n1N5XeHZo5pPKpRkknGKjJOt95OvdS+PcsQAAAreIwpxxpq1DK4tdoyTUF/NjMPgofwRfwo1ekOZ48HEzXOOOOaN8teOVu/8MDg/264rtj/w/wC5K6YSvoMeEx/hxPGbhIaZeSPJ/l7ji/DPTDiMuVQbhFU35Uk9lyuV/l0LmXi2VprU+23q3zddIdv/ADqZuUjvho5ZTeKhGTBkjQACAAAAAAAAC74XLwihC1HVpjb0u1LTvvV/IpJ5IW1CccmPVpipbN7XS2puq6I148KlHTrk7jyUnaVb13+CIXiLfkb5t9+cuTkq6eVUK1jJErNlUJKUYtWtO7bj3STvSvgYfCZo6njy+dqKjK5Q0qPRNXae22yN3ApKKhKoNPMmle2mKlFans976vm+5vfDJW+VY1lem1s5RVUtm/MnbG1OU8rMvEOLUo6W3D7zaxX15fQiyy8XPT6yaau5RbSTVKlUY099X0JEsbUtOtt7p1oa2rk9PtRryNJXrb2u02q8jnTScbdL6js44TvZ6xxybOUoqS+9GDVe5uW3vOn9F+LyTU1KbyQVVOW++9x1denPf5nHeIZlCDkorVvu1dU0uvP730Pofg+DRgxRaqWlSkv+qXma+DdfA1jHLXyx49JgBg28qo9KM+PHgnPK0sWlwm5ctM5wu/ZSZyS8S8E/E4X46f1LD/5gi34Vlp1WTE37VrSr6o+AtV7TNrvpYWzd968O43wzJPRgnw88juoQ0amkt6XN7WWPEcFg0tyhBJdWlV/E/PnhvFZMOWGXFJwywdxlSdOmuTVPZvmWnHeMcTxebDLiJ+scZRUfLGKScl0ikjNyjvNHO+ePqADBEAAAAAAAAAABmEkq8qtdVa+Jq9Utuy6Uq6W3tu9vyNgBuwlz7ebbnvOKjJ3z6HpSdSV7Sjpd77eXlfL7C5GAUvZB079/1r+h49XtV9vkoaK+X5nsAac3DqTWptq7cej8zk4v2O2jo36UZfw4fKX9SiAl2SyX1eftPl/Dh/N/UftPl/Dh/N/UowN6nDH4SvSPjpcZw0+HyJQhNxblC9S0TU1V2ua7HG/sTg/Fy/OH+k6gEvfreNuM2xcu/Qjh7v1uX5w/0nvH6G4ItP1uXZp84dHf8J0oJtGv7c/kABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z" alt="">
+        <h3>sign in or sign up</h3>
+       <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" name="txtName" class="form-control" placeholder="Your Name" value="" required/>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="txtEmail" class="form-control" placeholder="Your Email" value="" required/>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="txtPhone" class="form-control" placeholder="Your Phone Number" value="" required/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Send" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+</body>
+</html>

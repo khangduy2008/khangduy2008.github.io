@@ -31,8 +31,14 @@ nav ul{
     width: 45%;
     list-style: none;
 }
-nav ul li {
-    font-size: 20px;
+ nav ul li {
+    font-size: 25px;
+    font-weight: 300;
+}
+nav ul li a:hover{
+    color: orange;
+    border-bottom:1px solid orange;
+    transition: color 0.75s, border 0.5s;
 }
 a{
     color: white;
@@ -53,46 +59,51 @@ nav .logo img{
     font-size: 48px;
     white-space: 2px;
     letter-spacing: 2px;
+    margin-bottom: 30px;
 }
-.btn-ghost:link, .btn-ghost:visited {
-    border: solid 1px #e67e22;
-    color: #e67e22;
+.nav_intro a {
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 20px;
+    border: 2px solid orange;
+    transition: background 0.25s, color 0.5s;
 }
-.btn-full:link, .btn-full:visited, input[type=submit] {
-    background-color: #e67e22;
-    border: solid 1px #e67e22;
-    color: #fff;
-    margin-right: 15px;
+.nav_intro a:nth-child(3) {
+    margin-left: 25px;
+    color: orange;
 }
-.btn:link, .btn:visited, input[type=submit] {
-    display: inline-block;
-    padding: 10px 30px;
+.nav_introa:nth-child(2){
+    background: orange;
+}
+.nav_intro:nth-child(2):hover{
+    background: transparent;
+    color: orange;
+    transition: background 0.25s, color 0.5s;
+
+}
+.nav_introa:nth-child(3){
+    color: white;
+    background: orange;
+    transition: background 0.25s, color 0.5s;
+}
+.title{
+    font-size: 38px;
+    color: gray;
     font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    text-align: center;
+    margin-top: 60px ;
+    text-transform: uppercase;
+    white-space: 0.5px;
+    letter-spacing: 0.5px;
 }
-a:link, a:visited {
-    color: #e67e22;
-    text-decoration: none;
-    padding-bottom: 1px;
-    border-bottom: 1px solid #e67e22;
-    -webkit-transition: border-bottom 0.2s, color 0.2s;
-    transition: border-bottom 0.2s, color 0.2s;
+.title::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background: orange;
+    
+
 }
-a {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-user agent stylesheet
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
+
+
+

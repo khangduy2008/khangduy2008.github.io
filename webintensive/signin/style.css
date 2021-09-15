@@ -1,0 +1,14 @@
+form{
+    text-align: center;
+}
+.form-group{
+    width: 100%;
+    display: flex;
+    margin-left: 500px;
+}
+.form-group input{
+    width: 370px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background: rgba(247, 195, 204, 0.788);
+}
