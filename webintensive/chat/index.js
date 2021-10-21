@@ -52,6 +52,7 @@ async function init(){
   firebase.auth().onAuthStateChanged((user) => {
     if (user && user.emailVerified) {
       loadConversations(user.email)
+      handleConversationChange(user.email)
 
     } else {
       sweetAlert("warning","you need to login to chat")
@@ -64,7 +65,6 @@ let loadConversations = async (email) =>{
   let currenEmail = email.trim()
   document.querySelector("#currentEmail").innerHTML = currenEmail
   let result = await firebase.firestore().collection('chat').where('user', 'array-contains', currenEmail).get()
-  
 
   let data = getDataFromDocs(result.docs)
   console.log(data);
@@ -163,9 +163,62 @@ let sweetAlert = (icon, content) => {
   });
 };
 
+let formInputMessage = document.querySelector("#sent_message");
+formInputMessage.onsubmit = (e) => {
+e.preventDefault();
+let currentEmail = document.querySelector("#currentEmail").innerHTML;
+let currentId = document.querySelector("#currentId").innerHTML;
 
-let forminputMessage = document.querySelector("#sent_messages")
-forminputMessage.onsubmit = (e)=>{
-  e.pre
-}
+let message = formInputMessage.m.value;
+
+updateMessage(message, currentEmail, currentId);
+formInputMessage.m.value = "";
+};
+
+let updateMessage = async (messageContent, currenEmail, currentId) => {
+let message = {
+  content: messageContent,
+  owner: currenEmail,
+  time: getRealTime(),
+};
+
+await firebase
+  .firestore()
+  .collection("chat")
+  .doc(currentId)
+  .update({
+    messages: firebase.firestore.FieldValue.arrayUnion(message),
+  });
+};
+
+let handleConversationChange = async (email) => {
+let skipRun = true;
+let currentEmail = email;
+console.log(currentEmail);
+firebase
+  .firestore()
+  .collection("chat")
+  .where("user", "array-contains", currentEmail)
+  .onSnapshot(function (snapshot) {
+    if (skipRun) {
+      skipRun = false;
+      return;
+    }
+
+    let docChanges = snapshot.docChanges();
+    for (let docChange of docChanges) {
+      let type = docChange.type;
+      let conversationDoc = docChange.doc;
+      let conversation = getDataFromDoc(conversationDoc);
+
+      if (type == "modified") {
+        
+        rederChat(conversation, currentEmail);
+      }
+      if (type == "added") {
+        setTimeout(function () {location.reload();}, 5000);
+      }
+    }
+  });
+};
 
