@@ -228,15 +228,18 @@ btn.addEventListener("click", ()=>{
   let name = formInput.name.value
   let email = formInput.email.value.toLowerCase()
 
-  console.log(name);
-  console.log(email);
-
-  addNewConversation(name, friendEmai)
+  // "NguyenCuong Dang Duiy"
+  if(name && email){
+    disableBtn("#btn")
+    addNewConversation(name, email)
+  }
 })
 
 let addNewConversation = async (chatName, friendEmai)=>{
   let currenEmail = document.querySelector("#currentEmail").innerHTML
-  let newUsers = [friendEmai,currenEmail ]
+
+  let newUsers = friendEmai.split(" ") 
+  newUsers.push(currenEmail)
   // code upload ảnh lên firebase
   const ref = await firebase.storage().ref();
   const file = document.querySelector("#photo").files[0];
@@ -261,9 +264,20 @@ let addNewConversation = async (chatName, friendEmai)=>{
     })
     .catch((err) => {
       alert(err);
+      enableBtn("#btn")
     });
 }
 
 let addConversation = async (data)=>{
   await firebase.firestore().collection("chat").add(data)
+  alert("tạo cuộc trò chuyện thành công")
+  disableBtn("#btn")
+}
+
+let disableBtn = (query)=>{
+  document.querySelector(query).disabled = true;
+}
+
+let enableBtn = (query)=>{
+  document.querySelector(query).disabled = false;
 }
