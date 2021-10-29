@@ -222,3 +222,48 @@ firebase
   });
 };
 
+let formInput = document.querySelector("#add")
+let btn = document.querySelector("#btn")
+btn.addEventListener("click", ()=>{
+  let name = formInput.name.value
+  let email = formInput.email.value.toLowerCase()
+
+  console.log(name);
+  console.log(email);
+
+  addNewConversation(name, friendEmai)
+})
+
+let addNewConversation = async (chatName, friendEmai)=>{
+  let currenEmail = document.querySelector("#currentEmail").innerHTML
+  let newUsers = [friendEmai,currenEmail ]
+  // code upload ảnh lên firebase
+  const ref = await firebase.storage().ref();
+  const file = document.querySelector("#photo").files[0];
+
+  const metadata = {
+    contentType: file.type,
+  };
+  const name = file.name;
+  const imgUploaded = ref.child(name).put(file, metadata);
+
+  imgUploaded
+    .then((snapshot) => snapshot.ref.getDownloadURL())
+    .then((url) => {
+     let conversation = {
+      createAt: getRealTime(),
+      img: url,
+      messages: [],
+      name: chatName,
+      user: newUsers
+     }
+     addConversation(conversation)
+    })
+    .catch((err) => {
+      alert(err);
+    });
+}
+
+let addConversation = async (data)=>{
+  await firebase.firestore().collection("chat").add(data)
+}
